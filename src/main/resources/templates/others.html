@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Others</title>
+    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/shop1}">Shop page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/umbrophile}">Umbrophile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/aquatic}">Aquatic</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/heliophyte}">Heliophyte</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/others}">Others</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/refill}">Refill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-justify-content-end">
+        <li>
+            <h1>First name    .</h1>
+        </li>
+        <li>
+            <h1>Balance    .</h1>
+        </li>
+    </div>
+    <div class="nav- jusify-content-end">
+        <li>
+            <h1 class="my-font display-4" th:text="${fname}"></h1>
+        </li>
+        <li>
+            <h1 class="my-font display-4" th:text="${balance}"></h1>
+        </li>
+    </div>
+</nav>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/osmo}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/osmo.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>บำรุงรากจนถึงผลดอก ปล่อยธาตุอาหารอย่างสม่ำเสมอเป็นเวลา 3 เดือน
+                    วิธีใช้ : โรยบนดินในบริเวณขอบกระถาง ทุกๆ 3 เดือน
+                    ราคา : 20  ต่อ 1 กระปุก(50 กรัม)
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout1}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/coconut}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/coconut.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>จะช่วยให้ดินดูดซับน้ำได้ดี ทำให้ต้นไม้ดูชุ่มชื้นอยู่ตลอดเวลา แล้วยังช่วยทำให้ดินโปร่ง แล้วเมื่อโรยบนหน้าดิน ทำให้เวลารดน้ำแล้วดินจะไม่ค่อยกระเด็นออก
+                    วิธีใช้ : ใส่ไว้ในก้นกระถางก่อนจะตามด้วยดินที่ผสมกับกากมะพร้าวหรือไม่ก็ได้ เมื่อเอาต้นไม้หรือพืชลงในกระถางเสร็จ โรยบนหน้าดินอีกรอบ
+                    ราคา : 20  ต่อ 1 ถุง
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout2}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin2}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/pot}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/pot.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>       ขนาด 15 นิ้ว สีดำ มีน้ำหนักเบา เคลื่อนย้ายได้ง่าย อากาศถ่ายเทได้สะดวกระบายน้ำได้ดีทำให้รากไม่เน่า มีความแข็งแรงทนแดดทนฝน ไม่กรอบ และไม่แตกหักง่าย
+                    วิธีใช้ : ไว้สำหรับปลูกและวางต้นไม้ขนาดเล็ก
+                    ราคา : 45 ต่อ 1 ใบ
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout3}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin3}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/wire}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/wire.jpg" class="img-thumbnail" width="200" height="200">
+            </div>
+            <div class="from-group">
+                <h1> มี 3 ขา ยาวประมาณ 70 cm. วัดจากหัวตะขอถึงปลายลวด
+                    ถ้าวัดจากคอสีถึงปลายลวด 50cm.
+                    วิธีใช้ : ใช้แขวนกล้วยไม้  ไม้ดอกไม้ประดับ ไม้รากอากาศ หรืออื่นๆ
+                    ราคา : 7 บาท ต่อ 1 เส้น
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout4}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin4}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

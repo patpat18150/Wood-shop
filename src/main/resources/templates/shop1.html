@@ -1,0 +1,58 @@
+<!doctype html>
+<html  lang="en"  xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop page1</title>
+    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/home}">Shop page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/umbrophile}">Umbrophile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/aquatic}">Aquatic</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/heloiphyte}">Heliophyte</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/others}">Others</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/refill}">Refill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+        </ul>
+    </div>
+    <div class="nav-justify-content-end">
+            <li>
+                <h1>First name    .</h1>
+            </li>
+            <li>
+                <h1>Balance    .</h1>
+            </li>
+    </div>
+    <div class="nav-jusify-content-end">
+        <li>
+             <h1  th:text="${fname}"></h1>
+        </li>
+        <li>
+            <h1 th:text="${balance}"></h1>
+        </li>
+    </div>
+</nav>
+
+</body>
+</html>

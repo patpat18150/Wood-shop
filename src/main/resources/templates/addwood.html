@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}"
+          xmlns:th="https://www.thymeleaf.org">
+
+<div class="container" layout:fragment="content">
+
+    <h1>Add Wood</h1>
+    <form th:action="@{/addwood}" method="POST">
+        <div class="from-group">
+            <label for="inputwoodId">woodId</label>
+            <input type="input" name="woodId" id="inputwoodId" class="form-control">
+        </div>
+        <div class="from-group">
+            <label for="inputType">type</label>
+            <input type="input" name="type" id="inputType" class="form-control">
+        </div>
+        <div class="from-group">
+            <label for="inputTier">tier</label>
+            <input type="input" name="tier" id="inputTier" class="form-control">
+        </div>
+        <div class="from-group">
+            <label for="inputPrice">price</label>
+            <input type="input" name="price" id="inputPrice" class="form-control">
+        </div>
+        <div class="from-group">
+            <label for="inputDes">des</label>
+            <input type="input" name="des" id="inputDes" class="form-control">
+        </div>
+        <div class="from-group">
+            <label for="inputWoodname">woodname</label>
+            <input type="input" name="woodname" id="inputWoodname" class="form-control">
+        </div>
+        <div class="from-group">
+            <input type="submit" class="btn btn-primary">
+        </div>
+    </form>
+    <div>
+        <h1>Status</h1>
+        <h2 th:text = "${AddWoodAlert}"> HHH</h2>
+    </div>
+</div>
+</html>

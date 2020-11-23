@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Heliophyte</title>
+    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/shop1}">Shop page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/umbrophile}">Umbrophile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/aquatic}">Aquatic</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/heliophyte}">Heliophyte</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/others}">Others</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/refill}">Refill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-justify-content-end">
+        <li>
+            <h1>First name    .</h1>
+        </li>
+        <li>
+            <h1>Balance    .</h1>
+        </li>
+    </div>
+    <div class="nav- jusify-content-end">
+        <li>
+            <h1 class="my-font display-4" th:text="${fname}"></h1>
+        </li>
+        <li>
+            <h1 class="my-font display-4" th:text="${balance}"></h1>
+        </li>
+    </div>
+</nav>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/adenium}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/adenium.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>เป็นไม้ที่ปลูกเลี้ยงง่าย ทนต่อสภาพแห้งแล้งมาก
+                    วิธีดูแล : อยู่ในที่ที่โดนแดด และ2 -3 วัน รดน้ำครั้งนึง เฉพาะช่วงเช้า ถ้าอยู่ในช่วงหน้าฝนควรนำไปวางในที่ไม่โดนฝน เพราะไม่ควรโดนฝนหรือน้ำติดต่อกันหลายวัน
+                    ราคา : 80  ต่อ 1 กระถาง
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout1}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/shoe}" method="POST">
+            <div class="from-group" align="center">
+                <img src="image/shoe.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>จัดเป็นดอกไม้ประจำชาติของประเทศมาเลเซีย ชอบแดดมากๆ
+                    วิธีดูแล : อยู่ในที่ที่โดนแดด ควรรดน้ำทุกวัน เช้า-เย็น
+                    ราคา : 80  ต่อ 1 กระถาง
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout2}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin2}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

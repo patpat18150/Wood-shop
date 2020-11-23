@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Aquatic</title>
+    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/shop1}">Shop page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/umbrophile}">Umbrophile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/aquatic}">Aquatic</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/heliophyte}">Heliophyte</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/others}">Others</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/refill}">Refill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-justify-content-end">
+        <li>
+            <h1>First name    .</h1>
+        </li>
+        <li>
+            <h1>Balance    .</h1>
+        </li>
+    </div>
+    <div class="nav- jusify-content-end">
+        <li>
+            <h1 class="my-font display-4" th:text="${fname}"></h1>
+        </li>
+        <li>
+            <h1 class="my-font display-4" th:text="${balance}"></h1>
+        </li>
+    </div>
+</nav>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/pennywort}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/Pennywort2.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>เป็นไม้ล้มลุก ชอบแสงแดด แต่สามารถปลูกในที่ร่มได้ แต่ก้านใบจะยืดยาวและล้มง่าย ปลูกเป็นไม้คลุมดิน แทนหญ้าบริเวณริมน้ำหรือบริเวณดินเลนที่มีน้ำตื้น ๆ หากปลูกในที่ร่ม ก้านใบจะยืดยาวและล้มง่าย ไม่เป็นพุ่ม ถ้าปลูกในที่แห้งแล้ง ต้นจะเตี้ย ก้านใบสั้น  ใบกินเป็นผักสดแกล้มกับน้ำพริกหรืออาหารรสจัดได้  ด้านสมุนไพร รากนำมาต้มดื่มสำหรับผู้ที่เป็นโรคตับและลำไส้ เป็นยาทำให้อาเจียน ช่วยขับปัสสาวะ และช่วยสมานแผล
+                    วิธีดูแล : ควรเติมน้ำอยู่เสมอ แต่ใบต้องลอยอยู่เหนือน้ำ
+                    ราคา : 50 ต่อ 1 กระถาง
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout1}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/lotus}" method="POST">
+            <div class="from-group" align="center">
+                <img src="image/lotus2.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>ชอบแดด สามารถเจริญเติบโตได้ดีในทุกสภาพดิน อยู่ในน้ำสะอาด ในระดับน้ำไม่ลึกมากเกิน 1 เมตร อยู่ในดินร่วนหรือดินเหนียว ควรมีน้ำในระดับสูงกว่าปลายเหง้าบัวเพียงเล็กน้อยเสมอ ไม่ว่าจะเป็นดอก ใบ ฝักบัว หรือรากบัวล้วนสามารถนำไปใช้ประโยชน์ได้ทั้งหมด
+                    วิธีดูแล : ควรมีน้ำในระดับสูงกว่าปลายเหง้าบัวเพียงเล็กน้อยเสมอ ควรโดนแดดครึ่งวันหรือมากกว่านั้น
+                    ราคา : 90 ต่อ 1 กระถาง
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout2}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin2}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/hydrilla}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/Hydrilla2.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>เเป็นพืชน้ำจืด เป็นอาหารให้กุ้งน้ำจืดและปลาน้ำจืดชนิดกินพืช เช่น  ปลานิล ปลาจีน  ปลาตะเพียนขาว  ปลาแรด  ปลาไน แล้วยังเป็นที่หลบศัตรูของสัตว์น้ำ เช่น ลูกปลา
+                    วิธีดูแล : ควรบำบัดน้ำทำให้ใสเสมอ
+                    ราคา : 50 ต่อ 1 g.
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout3}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin3}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/loosestrife}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/Loosestrife2.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <h1>ชอบแสงแดด แต่สามารถอยู่ในแสงรำไรได้แต่มักจะไม่ออกดอก เป็นไม้ประดับประเภทไม้น้ำ ปลูกตกแต่งสระบัว บ่อปลา หรือใส่กระถางประดับในมุมต่างๆ ของสวน
+                    วิธีดูแล : ควรเติมน้ำอยู่เสมอ แต่ใบต้องลอยอยู่เหนือน้ำ
+                    ราคา : 60 ต่อ 1 กระถาง
+                </h1>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout4}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin4}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

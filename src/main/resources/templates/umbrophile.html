@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Umbrophile</title>
+    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:href="@{/shop1}">Shop page</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/umbrophile}">Umbrophile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/aquatic}">Aquatic</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/heliophyte}">Heliophyte</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/others}">Others</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/refill}">Refill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-justify-content-end">
+        <li>
+            <h1>First name    .</h1>
+        </li>
+        <li>
+            <h1>Balance    .</h1>
+        </li>
+    </div>
+    <div class="nav- jusify-content-end">
+        <li>
+            <h1 class="my-font display-4" th:text="${fname}"></h1>
+        </li>
+        <li>
+            <h1 class="my-font display-4" th:text="${balance}"></h1>
+        </li>
+    </div>
+</nav>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/dracaena}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/Dracaena1.jpg" class="img-thumbnail" width="500" height="500" >
+            </div>
+            <div class="from-group">
+                <font size="16">ไม้พุ่มขนาดกลาง เป็นไม้มงคล มีความเชื่อว่าปลูกไว้ในบ้านจะนำพาความโชคดีมีลาภเงินทองเข้ามาในบ้าน ปลูกในร้านขายของเชื่อว่าจะนำเงินทองเข้าร้าน
+                    วิธีดูแล : อยู่ในที่ที่มีแสงรำไร รดน้ำทุกเช้า หรือ 1-2 วัน รดตอนเช้า 1 ครั้ง แต่รดน้ำไม่ต้องมากค่ะ
+                    ราคา 40บาท / 1 กระถาง
+                </font>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout1}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/philodendron}" method="POST">
+            <div class="from-group" align="center">
+                <img src="image/philodendron1.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group" >
+                <font size="16"> เป็นไม้มงคล เชื่อกันว่าช่วยเรียกเงินเรียกทอง เรียกโชคลาภเข้าบ้าน เหมาะสำหรับปลูกในไว้บ้าน ให้เป็นของขวัญ เชื่อว่าปลูกไว้แล้วจะดี
+                    วิธีดูแล : อยู่ในที่ที่มีแสงรำไร รดน้ำทุกเช้า หรือ 1-2 วัน รดตอนเช้า 1 ครั้ง แต่รดน้ำไม่ต้องมากค่ะ
+                    ราคา : 250 ต่อ 1 กระถาง
+                </font>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout2}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin2}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/croton}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/croton1.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <font size="16">เป็นไม้ใบประดับ มีสีสันต่างๆมากมาย เลี้ยงดูง่าย
+                    วิธีดูแล : อยู่ในที่ที่มีแสงรำไร รดน้ำทุกเช้า
+                    ราคา : 150 ต่อ 1 กระถาง
+                </font>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout3}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin3}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class ="jumbotron">
+        <form  th:action="@{/variegata}" method="POST">
+            <div class="from-group" align="center">
+                <img src="/image/variegata1.jpg" class="img-thumbnail" width="500" height="500">
+            </div>
+            <div class="from-group">
+                <font size="16">ไม้ฟอกอากาศ เลี้ยงง่ายมาก เป็นต้นไม้ที่อดทน สามารถอยู่ได้ทั้งพื้นที่ที่มีแสงแดดรำไร หรือแดดแต่ถ้าปลูกในที่แสงแดดจัดเกินไปใบจะไหม้และไม่สวย ควรปลูกในที่แสงแดดรำไรจะทำให้ใบมันสวยอยู่ตลอด ถ้าปลูกไว้ในบ้านควรทำความสะอาดใบอยู่ตลอด ใช้ผ้าชุบน้ำเช็ดที่ใบ กำจัดเศษฝุ่นและสิ่งสกปรกออก เพื่อให้ใบเงางาม
+                    วิธีดูแล : รดน้ำทุกเช้า ต้องรดน้ำจนแฉะ
+                    ราคา : 500 ต่อ 1 กระถาง
+                </font>
+            </div>
+            <div class="from-group">
+                <button type="submit" class="btn- btn-primary" >Buy</button>
+            </div>
+            <div class="from-group">
+                <h1 th:text="${soldout4}"></h1>
+            </div>
+            <div class="from-group">
+                <h2 th:text="${notlogin4}"></h2>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
